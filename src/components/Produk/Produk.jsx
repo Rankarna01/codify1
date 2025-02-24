@@ -8,9 +8,6 @@ import photo5 from "../../assets/photo1.png";
 import photo6 from "../../assets/photo2.png";
 import photo7 from "../../assets/latahzan.png";
 import photo8 from "../../assets/website.png";
-
-
-
 const Produk = () => {
   const [activeCategory, setActiveCategory] = useState("all");
 

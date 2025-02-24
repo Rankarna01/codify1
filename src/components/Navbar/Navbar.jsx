@@ -30,6 +30,11 @@ const Menu = [
     name: "Team", // Menambahkan menu Team
     link: "/team", // Rute Halaman Team
   },
+  {
+    id: 6,
+    name: "Source Code", // Menambahkan menu Source Code
+    link: "/source", // Rute Halaman Source Code
+  },
 ];
 
 const Navbar = () => {

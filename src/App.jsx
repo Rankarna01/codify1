@@ -9,6 +9,7 @@ import Services from "./components/Services/Services";
 import Footer from "./components/Footer/Footer";
 import Produk from "./components/Produk/Produk";
 import Team from "./components/Team/Team"; // Impor komponen Team
+import Source from "./components/Sourcee/Source";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -47,7 +48,10 @@ const App = () => {
           <Route path="/Produk" element={<Produk />} />
 
           {/* Rute ke Halaman Team */}
-          <Route path="/Team" element={<Team />} /> {/* Tambahkan route baru */}
+          <Route path="/Team" element={<Team />} /> 
+
+          {/* Rute ke Halaman Source Code */}
+          <Route path="/Source" element={<Source />} />
         </Routes>
         <Footer />
       </div>
