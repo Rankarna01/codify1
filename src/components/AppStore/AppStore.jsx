@@ -45,7 +45,7 @@ const Gallery = () => {
     <>
      <div className="bg-gray-100 dark:bg-gray-800 py-14">
   <div className="container px-4 mx-auto">
-    <h1 className="text-center text-4xl font-semibold mb-10 text-gray-700 dark:text-gray-400">
+    <h1 className="text-center text-4xl font-semibold mb-10 text-blue-700 dark:text-blue-400">
       Project Gallery
     </h1>
     

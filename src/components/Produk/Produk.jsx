@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion"; // Import Framer Motion
+import { motion, AnimatePresence } from "framer-motion"; 
+import BouncingCard from "../Produk/BouncingCard";
 import photo1 from "../../assets/photo4.png";
 import photo2 from "../../assets/shopping.png";
 import photo3 from "../../assets/desain.png";
@@ -30,7 +31,7 @@ const Produk = () => {
       </div>
 
       {/* Menu Kategori */}
-<div className="text-center mb-8">
+{/* <div className="text-center mb-8">
   <div className="flex flex-wrap justify-center gap-4">
     <button
       onClick={() => handleCategoryClick("all")}
@@ -65,7 +66,7 @@ const Produk = () => {
       Design
     </button>
   </div>
-</div>
+</div> */}
 
 
       {/* Grid Produk */}
@@ -75,273 +76,94 @@ const Produk = () => {
       >
         <AnimatePresence>
           {/* Produk 1 */}
-          {(activeCategory === "all" || activeCategory === "source-code") && (
-            <motion.div
-              className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
-              variants={cardVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              transition={{ duration: 0.4 }}
-            >
-              <a href="#">
-                <img
-                  src={photo1}
-                  alt="Product 1"
-                  className="h-80 w-72 object-cover rounded-t-xl"
-                />
-                <div className="px-4 py-3 w-72">
-                  <span className="text-gray-400 mr-3 uppercase text-xs">
-                    Source Code
-                  </span>
-                  <p className="text-lg font-bold text-black truncate block capitalize">
-                    Website Sistem Manajemen Sekolah
-                  </p>
-                  <div className="flex items-center">
-                    <p className="text-lg font-semibold text-black cursor-auto my-3">
-                      Rp 25000
-                    </p>
-                    <del>
-                      <p className="text-sm text-gray-600 cursor-auto ml-2">
-                        Rp 50000
-                      </p>
-                    </del>
-                  </div>
-                </div>
-              </a>
-            </motion.div>
-          )}
+  {(activeCategory === "all" || activeCategory === "source-code") && (
+    <BouncingCard
+      imgSrc={photo1}
+      category="Source Code"
+      title="Website Sistem Manajemen Sekolah"
+      price={25000}
+      oldPrice={50000}
+    />
+  )}
 
-          {/* Produk 2 */}
-          {(activeCategory === "all" || activeCategory === "source-code") && (
-            <motion.div
-              className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
-              variants={cardVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              transition={{ duration: 0.4 }}
-            >
-              <a href="#">
-                <img
-                  src={photo2}
-                  alt="Product 2"
-                  className="h-80 w-72 object-cover rounded-t-xl"
-                />
-                <div className="px-4 py-3 w-72">
-                  <span className="text-gray-400 mr-3 uppercase text-xs">
-                    Source Code
-                  </span>
-                  <p className="text-lg font-bold text-black truncate block capitalize">
-                    Website Sistem Shopping Php Native
-                  </p>
-                  <div className="flex items-center">
-                    <p className="text-lg font-semibold text-black cursor-auto my-3">
-                      Rp 25000
-                    </p>
-                    <del>
-                      <p className="text-sm text-gray-600 cursor-auto ml-2">
-                        Rp 50000
-                      </p>
-                    </del>
-                  </div>
-                </div>
-              </a>
-            </motion.div>
-          )}
+  {/* Produk 2 */}
+  {(activeCategory === "all" || activeCategory === "source-code") && (
+    <BouncingCard
+      imgSrc={photo2}
+      category="Source Code"
+      title="Website Sistem Manajemen Sekolah"
+      price={25000}
+      oldPrice={50000}
+    />
+  )}
 
-          {/* Produk 3 */}
-          {(activeCategory === "all" || activeCategory === "design") && (
-            <motion.div
-              className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
-              variants={cardVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              transition={{ duration: 0.4 }}
-            >
-              <a href="#">
-                <img
-                  src={photo3}
-                  alt="Product 3"
-                  className="h-80 w-72 object-cover rounded-t-xl"
-                />
-                <div className="px-4 py-3 w-72">
-                  <span className="text-gray-400 mr-3 uppercase text-xs">
-                    Design
-                  </span>
-                  <p className="text-lg font-bold text-black truncate block capitalize">
-                    Product 3
-                  </p>
-                  <div className="flex items-center">
-                    <p className="text-lg font-semibold text-black cursor-auto my-3">
-                      Rp 30000
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </motion.div>
-          )}
-          {/* Produk 4 */}
-          {(activeCategory === "all" || activeCategory === "logo") && (
-            <motion.div
-              className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
-              variants={cardVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              transition={{ duration: 0.4 }}
-            >
-              <a href="#">
-                <img
-                  src={photo4}
-                  alt="Product 3"
-                  className="h-80 w-72 object-cover rounded-t-xl"
-                />
-                <div className="px-4 py-3 w-72">
-                  <span className="text-gray-400 mr-3 uppercase text-xs">
-                    Design
-                  </span>
-                  <p className="text-lg font-bold text-black truncate block capitalize">
-                    Product 3
-                  </p>
-                  <div className="flex items-center">
-                    <p className="text-lg font-semibold text-black cursor-auto my-3">
-                      Rp 30000
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </motion.div>
-          )}
-          {/* Produk 5 */}
-          {(activeCategory === "all" || activeCategory === "logo") && (
-            <motion.div
-              className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
-              variants={cardVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              transition={{ duration: 0.4 }}
-            >
-              <a href="#">
-                <img
-                  src={photo5}
-                  alt="Product 3"
-                  className="h-80 w-72 object-cover rounded-t-xl"
-                />
-                <div className="px-4 py-3 w-72">
-                  <span className="text-gray-400 mr-3 uppercase text-xs">
-                    Design
-                  </span>
-                  <p className="text-lg font-bold text-black truncate block capitalize">
-                    Product 3
-                  </p>
-                  <div className="flex items-center">
-                    <p className="text-lg font-semibold text-black cursor-auto my-3">
-                      Rp 30000
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </motion.div>
-          )}
-          {/* Produk 6 */}
-          {(activeCategory === "all" || activeCategory === "logo") && (
-            <motion.div
-              className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
-              variants={cardVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              transition={{ duration: 0.4 }}
-            >
-              <a href="#">
-                <img
-                  src={photo6}
-                  alt="Product 3"
-                  className="h-80 w-72 object-cover rounded-t-xl"
-                />
-                <div className="px-4 py-3 w-72">
-                  <span className="text-gray-400 mr-3 uppercase text-xs">
-                    Design
-                  </span>
-                  <p className="text-lg font-bold text-black truncate block capitalize">
-                    Product 3
-                  </p>
-                  <div className="flex items-center">
-                    <p className="text-lg font-semibold text-black cursor-auto my-3">
-                      Rp 30000
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </motion.div>
-          )}
-          {/* Produk 7 */}
-          {(activeCategory === "all" || activeCategory === "source-code") && (
-            <motion.div
-              className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
-              variants={cardVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              transition={{ duration: 0.4 }}
-            >
-              <a href="#">
-                <img
-                  src={photo7}
-                  alt="Product 3"
-                  className="h-80 w-72 object-cover rounded-t-xl"
-                />
-                <div className="px-4 py-3 w-72">
-                  <span className="text-gray-400 mr-3 uppercase text-xs">
-                    Design
-                  </span>
-                  <p className="text-lg font-bold text-black truncate block capitalize">
-                    Product 3
-                  </p>
-                  <div className="flex items-center">
-                    <p className="text-lg font-semibold text-black cursor-auto my-3">
-                      Rp 30000
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </motion.div>
-          )}
-          {/* Produk 8 */}
-          {(activeCategory === "all" || activeCategory === "source-code") && (
-            <motion.div
-              className="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl"
-              variants={cardVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              transition={{ duration: 0.4 }}
-            >
-              <a href="#">
-                <img
-                  src={photo8}
-                  alt="Product 3"
-                  className="h-80 w-72 object-cover rounded-t-xl"
-                />
-                <div className="px-4 py-3 w-72">
-                  <span className="text-gray-400 mr-3 uppercase text-xs">
-                    Design
-                  </span>
-                  <p className="text-lg font-bold text-black truncate block capitalize">
-                    Product 3
-                  </p>
-                  <div className="flex items-center">
-                    <p className="text-lg font-semibold text-black cursor-auto my-3">
-                      Rp 30000
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </motion.div>
-          )}
+  {/* Produk 3 */}
+  {(activeCategory === "all" || activeCategory === "source-code") && (
+    <BouncingCard
+      imgSrc={photo3}
+      category="Source Code"
+      title="Website Sistem Manajemen Sekolah"
+      price={25000}
+      oldPrice={50000}
+    />
+  )}
+
+  {/* Produk 4 */}
+  {(activeCategory === "all" || activeCategory === "source-code") && (
+    <BouncingCard
+      imgSrc={photo4}
+      category="Source Code"
+      title="Website Sistem Manajemen Sekolah"
+      price={25000}
+      oldPrice={50000}
+    />
+  )}
+
+  {/* Produk 5 */}
+  {(activeCategory === "all" || activeCategory === "source-code") && (
+    <BouncingCard
+      imgSrc={photo5}
+      category="Source Code"
+      title="Website Sistem Manajemen Sekolah"
+      price={25000}
+      oldPrice={50000}
+    />
+  )}
+
+  {/* Produk 6 */}
+  {(activeCategory === "all" || activeCategory === "source-code") && (
+    <BouncingCard
+      imgSrc={photo6}
+      category="Source Code"
+      title="Website Sistem Manajemen Sekolah"
+      price={25000}
+      oldPrice={50000}
+    />
+  )}
+
+  {/* Produk 7 */}
+  {(activeCategory === "all" || activeCategory === "source-code") && (
+    <BouncingCard
+      imgSrc={photo7}
+      category="Source Code"
+      title="Website Sistem Manajemen Sekolah"
+      price={25000}
+      oldPrice={50000}
+    />
+  )}
+
+  {/* Produk 8 */}
+  {(activeCategory === "all" || activeCategory === "source-code") && (
+    <BouncingCard
+      imgSrc={photo8}
+      category="Source Code"
+      title="Website Sistem Manajemen Sekolah"
+      price={25000}
+      oldPrice={50000}
+    />
+  )}
+
+          
         </AnimatePresence>
       </section>
     </div>

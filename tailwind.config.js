@@ -5,7 +5,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Poppins", "sans-serif"],
+        lato: ["Lato", "sans-serif"],
+        oswald: ["Oswald", "sans-serif"],
       },
       colors: {
         editprimary: "#074799",

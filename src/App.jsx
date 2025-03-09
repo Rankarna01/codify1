@@ -4,7 +4,8 @@ import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 import Banner from "./components/Banner/Banner";
 import AppStore from "./components/AppStore/AppStore";
-import Testimonial from "./components/Testimonial/Testimonial";
+// import Testimonial from "./components/Testimonial/Testimonial";
+import Subscribe  from "./components/Subscribe";
 import Services from "./components/Services/Services";
 import Footer from "./components/Footer/Footer";
 import Produk from "./components/Produk/Produk";
@@ -39,19 +40,23 @@ const App = () => {
                 <Services />
                 <Banner />
                 <AppStore />
-                <Testimonial />
+                {/* <Testimonial /> */}
+                <Subscribe />
               </>
             }
           />
 
           {/* Rute ke Halaman Produk Digital */}
-          <Route path="/Produk" element={<Produk />} />
+          <Route path="/Produk" 
+          element={<Produk />} />
 
           {/* Rute ke Halaman Team */}
-          <Route path="/Team" element={<Team />} /> 
+          <Route path="/Team" 
+          element={<Team />} /> 
 
           {/* Rute ke Halaman Source Code */}
-          <Route path="/Source" element={<Source />} />
+          <Route path="/Source" 
+          element={<Source />} />
         </Routes>
         <Footer />
       </div>
