@@ -5,12 +5,13 @@ import Navbar from "./components/Navbar/Navbar";
 import Banner from "./components/Banner/Banner";
 import AppStore from "./components/AppStore/AppStore";
 // import Testimonial from "./components/Testimonial/Testimonial";
-import Subscribe  from "./components/Subscribe";
+import Subscribe from "./components/Subscribe";
 import Services from "./components/Services/Services";
 import Footer from "./components/Footer/Footer";
 import Produk from "./components/Produk/Produk";
 import Team from "./components/Team/Team"; // Impor komponen Team
 import Source from "./components/Sourcee/Source";
+import AdminDashboard from "./AdminDashboard"; // 🔥 Import Halaman Admin
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -47,16 +48,16 @@ const App = () => {
           />
 
           {/* Rute ke Halaman Produk Digital */}
-          <Route path="/Produk" 
-          element={<Produk />} />
+          <Route path="/Produk" element={<Produk />} />
 
           {/* Rute ke Halaman Team */}
-          <Route path="/Team" 
-          element={<Team />} /> 
+          <Route path="/Team" element={<Team />} />
 
           {/* Rute ke Halaman Source Code */}
-          <Route path="/Source" 
-          element={<Source />} />
+          <Route path="/Source" element={<Source />} />
+
+          {/* 🔥 Rute ke Halaman Admin */}
+          <Route path="/admin" element={<AdminDashboard />} />
         </Routes>
         <Footer />
       </div>
